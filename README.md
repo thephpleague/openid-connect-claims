@@ -45,10 +45,10 @@ $claims->setAddressCountry('United Kingdom');
 
 When the ClaimsSet object is JSON encoded you will get an object similar to this:
 
-```
+```json
 {
     "sub": "123",
-    "name": "Alex Bilbie"
+    "name": "Alex Bilbie",
     "given_name": "Alex",
     "family_name": "Bilbie",
     "nickname": "Alex",
