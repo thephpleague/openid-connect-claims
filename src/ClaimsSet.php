@@ -260,4 +260,63 @@ class ClaimsSet implements ClaimsSetInterface
         }
         return $this->attributes;
     }
+
+    /**
+     * Get a specific claim
+     *
+     * @param string $claim
+     *
+     * @return mixed
+     */
+    public function getClaim($claim)
+    {
+        if (array_key_exists($claim, $this->attributes)) {
+            return $this->attributes[$claim];
+        }
+
+        throw new \LogicException(sprintf('The claim `%s` is not set', $claim));
+    }
+
+    /**
+     * Set a claim
+     *
+     * @param string $claim
+     * @param mixed  $value
+     */
+    public function setClaim($claim, $value)
+    {
+        if (in_array(
+            $claim,
+            [
+                'sub',
+                'name',
+                'given_name',
+                'middle_name',
+                'family_name',
+                'nickname',
+                'preferred_username',
+                'profile',
+                'picture',
+                'website',
+                'email',
+                'email_verified',
+                'gender',
+                'birthdate',
+                'zoneinfo',
+                'locale',
+                'phone_number',
+                'phone_number_verified',
+                'address',
+            ]
+        )) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    'Please use the relevant method to set the `%s` claim',
+                    $claim
+                )
+            );
+        }
+
+        $this->attributes[$claim] = $value;
+    }
 }

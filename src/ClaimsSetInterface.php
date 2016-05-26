@@ -181,4 +181,21 @@ interface ClaimsSetInterface extends \JsonSerializable
      *                                         or as a single line feed character ("\n").
      */
     public function setFormattedAddress($formattedAddress);
+
+    /**
+     * Get a specific claim
+     *
+     * @param string $claim
+     *
+     * @return mixed
+     */
+    public function getClaim($claim);
+
+    /**
+     * Set a claim
+     *
+     * @param string $claim
+     * @param mixed  $value
+     */
+    public function setClaim($claim, $value);
 }
