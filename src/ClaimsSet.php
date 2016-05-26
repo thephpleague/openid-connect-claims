@@ -4,7 +4,7 @@ namespace League\OpenIdConnectClaims;
 
 class ClaimsSet implements ClaimsSetInterface
 {
-    private $attributes = [];
+    protected $attributes = [];
 
     /**
      * @inheritdoc
