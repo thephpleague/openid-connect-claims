@@ -1,0 +1,35 @@
+{
+    "name": "league/openid-connect-claims",
+    "description": "An OpenID Connect ID claims set implementation",
+    "homepage": "https://github.com/thephpleague/openid-connect-claims",
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:thephpleague/openid-connect-claims.git"
+        }
+    ],
+    "authors": [
+        {
+            "name": "Alex Bilbie",
+            "email": "hello@alexbilbie.com"
+        }
+    ],
+    "keywords": [
+        "openid",
+        "openid connect",
+        "claim",
+        "oauth",
+        "oauth",
+        "oauth2",
+        "oauth 2",
+        "oauth 2.0",
+        "jwt",
+        "auth"
+    ],
+    "autoload": {
+        "psr-4": {
+            "League\\OpenIdConnectClaims\\": "src/"
+        }
+    }
+}
